@@ -1,0 +1,34 @@
+.side-menu {
+    width: 250px;
+    height: 100vh;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 10px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.side-menu ul li a:hover {
+    text-decoration: underline;
+}
