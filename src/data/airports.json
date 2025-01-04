@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Indira Gandhi International Airport", "city": "Delhi", "code": "DEL" },
+  { "id": 2, "name": "Chhatrapati Shivaji Maharaj International Airport", "city": "Mumbai", "code": "BOM" },
+  { "id": 3, "name": "Kempegowda International Airport", "city": "Bangalore", "code": "BLR" },
+  { "id": 4, "name": "Chennai International Airport", "city": "Chennai", "code": "MAA" },
+  { "id": 5, "name": "Netaji Subhas Chandra Bose International Airport", "city": "Kolkata", "code": "CCU" }
+]

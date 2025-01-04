@@ -1,10 +1,13 @@
 .search-bar {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin: 20px;
     align-items: center;
+    justify-content: center;
 }
 
+/* Native Input Styling */
 .search-bar input {
     padding: 10px;
     border: 1px solid #ccc;
@@ -13,6 +16,7 @@
     font-size: 1rem;
 }
 
+/* Button Styling */
 .search-bar button {
     background: #2980b9;
     color: white;
@@ -25,4 +29,27 @@
 
 .search-bar button:hover {
     background: #1c638d;
+}
+
+/* Material-UI Select Styling */
+.search-bar .MuiFormControl-root {
+    min-width: 12rem;
+}
+
+.search-bar .MuiOutlinedInput-root {
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-bar .MuiSelect-select {
+    padding: 10px;
+}
+.datePicker{
+    width: 12rem;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    top: -26%;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root {
+    top: -12%;
 }
