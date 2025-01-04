@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import airportsData from '../data/airports.json';
 import '../styles/SearchBar.css';
-import { Select, MenuItem, InputLabel, FormControl, TextField, Button } from '@mui/material';
+import { Select, MenuItem, InputLabel, FormControl, TextField, Button, Box } from '@mui/material';
 
 function SearchBar() {
   const [from, setFrom] = useState('');
@@ -20,9 +20,9 @@ function SearchBar() {
 
   return (
     <div className='search-bar'>
-      {/* From Dropdown */}
-      <div>
-        <FormControl fullWidth margin="normal">
+      {/* First Row: From and To */}
+      <Box className='search-row'>
+        <FormControl fullWidth margin="normal" className='search-field'>
           <InputLabel id="from-airport-label">From Airport</InputLabel>
           <Select
             labelId="from-airport-label"
@@ -36,9 +36,8 @@ function SearchBar() {
             ))}
           </Select>
         </FormControl>
-      </div>
-      <div>
-        <FormControl fullWidth margin="normal">
+
+        <FormControl fullWidth margin="normal" className='search-field'>
           <InputLabel id="to-airport-label">To Airport</InputLabel>
           <Select
             labelId="to-airport-label"
@@ -52,16 +51,12 @@ function SearchBar() {
             ))}
           </Select>
         </FormControl>
-      </div>
- 
+      </Box>
 
-      {/* To Dropdown */}
-   
-
-      {/* Date Picker */}
-      <div className='datePicker'>
+      {/* Second Row: Date Picker */}
+      <Box className='search-row'>
         <TextField
-          label="Date"
+          // label="Date"
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
@@ -71,19 +66,21 @@ function SearchBar() {
           fullWidth
           margin="normal"
         />
-      </div>
-    
+       
+      </Box>
 
-      {/* Search Button */}
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={handleSearch}
-        fullWidth
-        style={{ marginTop: '10px' }}
-      >
-        Search
-      </Button>
+      {/* Third Row: Search Button */}
+      <Box className='search-row'>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleSearch}
+          fullWidth
+          style={{ marginTop: '10px' }}
+        >
+          Search
+        </Button>
+      </Box>
     </div>
   );
 }

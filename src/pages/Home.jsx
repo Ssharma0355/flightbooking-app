@@ -8,8 +8,8 @@ function Home() {
     <div className='home-page'>
         <SideMenu />
         <div className="content">
-            <h1>Search Flight</h1>
-            <SearchBar />
+          <h1>Search Flight</h1>
+          <SearchBar />
         </div>
       
     </div>

@@ -1,24 +1,27 @@
 .side-menu {
-    width: 250px;
+    width: 180px;
     height: 100vh;
-    background: #2c3e50;
+    background: #244f7a;
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
+.logo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
 .side-menu h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
-
 .side-menu ul {
     list-style: none;
     padding: 0;
 }
-
 .side-menu ul li {
     margin: 10px 0;
 }

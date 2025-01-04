@@ -4,6 +4,7 @@ import "../styles/sideMenu.css"
 function SideMenu() {
   return (
       <div className='side-menu'>
+          <div ><Link className="logo" to="/">Sky Scanner</Link></div>
           <ul>
               <li><Link to="/">Search Flight</Link></li>
               <li><Link to="/passangerdetails">Passanger Details</Link></li>
@@ -12,6 +13,7 @@ function SideMenu() {
               <li><Link to="/selfcheckin">Self check-in</Link></li>
               <li><Link to="/conclusion">Conclusion</Link></li>
           </ul>
+         
 
       </div>
   )

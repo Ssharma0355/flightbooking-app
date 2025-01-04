@@ -1,24 +1,43 @@
 .search-bar {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 20px auto;
     align-items: center;
     justify-content: center;
+    max-width: 600px;
+}
+
+/* First Row: From & To */
+.search-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Adjust individual input fields */
+.search-row .MuiFormControl-root {
+    flex: 1;
+    min-width: 12rem;
 }
 
 /* Native Input Styling */
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root{
+    top: -22% !important;
+}
 .search-bar input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 200px;
+    width: 266px;
     font-size: 1rem;
 }
 
 /* Button Styling */
 .search-bar button {
     background: #2980b9;
+    width: 15rem;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -39,17 +58,31 @@
 .search-bar .MuiOutlinedInput-root {
     border-radius: 5px;
     font-size: 1rem;
+    width: 18rem;
 }
 
 .search-bar .MuiSelect-select {
     padding: 10px;
 }
-.datePicker{
+
+/* Date Picker Styling */
+.datePicker {
+    width: 100%;
+    text-align: center;
+}
+
+.datePicker .MuiTextField-root {
     width: 12rem;
 }
-.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+
+/* Label Adjustments */
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
     top: -26%;
 }
+
 .css-113d811-MuiFormLabel-root-MuiInputLabel-root {
     top: -12%;
+}
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root{
+    width: 12rem;
 }
