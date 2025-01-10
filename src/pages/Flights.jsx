@@ -4,7 +4,6 @@ import { TextField, Button, Box } from '@mui/material';
 import Webcam from 'react-webcam';
 import { useNavigate } from 'react-router-dom';
 
-
 function Flights() {
   const [passengers, setPassengers] = useState([{ firstName: '', lastName: '', email: '' }]);
   const [isWebcamOpen, setIsWebcamOpen] = useState(false);
@@ -24,31 +23,36 @@ function Flights() {
     setPassengers([...passengers, { firstName: '', lastName: '', email: '' }]);
   };
 
+  // Remove a passenger
+  const removePassenger = (index) => {
+    const updatedPassengers = passengers.filter((_, i) => i !== index);
+    setPassengers(updatedPassengers);
+  };
+
   // Handle Webcam Capture
   const capture = () => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
     setIsWebcamOpen(false);
   };
-  const handleNext= () =>{
-    if (passengers && capturedImage){
-    navigate(`/selectseat`)
 
-  }
-  else{
-    alert("Please provide all details")
-  }
-  }
+  const handleNext = () => {
+    if (passengers.length && capturedImage) {
+      navigate(`/selectseat`);
+    } else {
+      alert("Please provide all details");
+    }
+  };
 
   return (
-    <div className='home-page'>
+    <div className="home-page">
       <SideMenu />
-      <div className='content'>
+      <div className="content">
         <h2>Passenger Details</h2>
 
         {/* Passenger Form Grid */}
         {passengers.map((passenger, index) => (
-          <Box key={index} className='passenger-form-grid'>
+          <Box key={index} className="passenger-form-grid">
             <TextField
               label="First Name"
               value={passenger.firstName}
@@ -70,6 +74,14 @@ function Flights() {
               fullWidth
               margin="normal"
             />
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => removePassenger(index)}
+              style={{ marginTop: '10px' }}
+            >
+              Remove Passenger
+            </Button>
           </Box>
         ))}
 
@@ -84,7 +96,7 @@ function Flights() {
         </Button>
 
         {/* Webcam Section */}
-        <div className='webcam-section'>
+        <div className="webcam-section">
           {isWebcamOpen ? (
             <div>
               <Webcam
@@ -115,7 +127,7 @@ function Flights() {
 
           {/* Display Captured Image */}
           {capturedImage && (
-            <div className='captured-image'>
+            <div className="captured-image">
               <h4>Captured Image:</h4>
               <img
                 src={capturedImage}
@@ -125,15 +137,17 @@ function Flights() {
             </div>
           )}
         </div>
-      <Button 
-      variant='contained'
-      color='primary'
-      onClick={handleNext}
-      fullWidth
-      style={{marginTop:"10px"}}
-      >
-      
-      </Button>
+
+        {/* Next Button */}
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleNext}
+          fullWidth
+          style={{ marginTop: '10px' }}
+        >
+          Next
+        </Button>
       </div>
     </div>
   );
