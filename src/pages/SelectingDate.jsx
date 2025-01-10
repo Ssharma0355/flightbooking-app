@@ -19,7 +19,7 @@ function SelectingDate() {
     return rows;
   };
 
-  const seats = generateSeats(11, 4); 
+  const seats = generateSeats(9, 4); 
 
   // Toggle seat selection
   const toggleSeat = (seat) => {
