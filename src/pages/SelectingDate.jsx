@@ -42,7 +42,7 @@ function SelectingDate() {
           className='flight-img'
             src={flightImage}
             alt="Flight"
-            style={{ width: '100%', height: 'auto', marginBottom: '20px' }}
+            style={{ width: '70%', height: 'auto', marginBottom: '20px' }}
           />
         </div>
 

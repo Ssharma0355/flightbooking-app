@@ -4,6 +4,7 @@
 }
 .flight-img{
     height: 80rem !important;
+    width: 60%;
 }
 .seat-row {
     display: flex;
@@ -40,4 +41,5 @@
     gap: 15px;
     /* Gap between rows */
     margin-top: 40px;
+    margin-right: 12rem;
 }
